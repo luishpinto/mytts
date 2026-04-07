@@ -35,11 +35,11 @@ def main():
 
     voice_map = load_voice_map(args.voices)
 
-    build_audio(slides, voice_map, subtitles_enabled=args.subtitles)
+    build_audio(slides, voice_map, audio_dir, subtitles_enabled=args.subtitles)
 
     if args.pdf:
         pdf_to_png(args.pdf, video_dir)
-        videos = create_all_slide_videos(args.subtitles)
+        videos = create_all_slide_videos(audio_dir, video_dir, args.subtitles)
         concat_videos(videos)
 
 if __name__ == "__main__":

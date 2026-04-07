@@ -104,4 +104,4 @@ def build_audio(
         if subtitles_enabled:
             subtitles.close()
 
-    full_audio.export(os.path.join(audio_dir, "full_audio.mp3"), format="mp3")
+    full_audio.export("./full_audio.mp3", format="mp3")

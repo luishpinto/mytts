@@ -1,4 +1,5 @@
 import os
+import re
 import subprocess
 from typing import List
 
@@ -57,7 +58,10 @@ def create_slide_video(
 def create_all_slide_videos(audio_dir: str, video_dir: str, subtitles_enabled: bool) -> List[str]:
     videos = []
 
-    mp3_files = sorted(f for f in os.listdir(audio_dir) if f.endswith(".mp3"))
+    mp3_files = sorted(
+        f for f in os.listdir(audio_dir)
+        if re.match(r"^\d{4}\.mp3$", f)
+    )
 
     for f in mp3_files:
         idx = os.path.splitext(f)[0]
@@ -72,7 +76,7 @@ def create_all_slide_videos(audio_dir: str, video_dir: str, subtitles_enabled: b
     return videos
 
 
-def concat_videos(videos: List[str], output_path: str = "final_video.mp4"):
+def concat_videos(videos: List[str], output_path: str = "./final_video.mp4"):
     list_file = "concat.txt"
 
     with open(list_file, "w") as f:

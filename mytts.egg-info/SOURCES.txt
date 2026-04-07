@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+mytts/__init__.py
+mytts/audio.py
+mytts/parser.py
+mytts/pdf.py
+mytts/utils.py
+mytts/video.py
+mytts.egg-info/PKG-INFO
+mytts.egg-info/SOURCES.txt
+mytts.egg-info/dependency_links.txt
+mytts.egg-info/entry_points.txt
+mytts.egg-info/requires.txt
+mytts.egg-info/top_level.txt
