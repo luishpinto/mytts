@@ -7,7 +7,8 @@ from pathlib import Path
 from core.dirs import create_run_dirs
 from core.parser import parse_script
 from core.audio import build_audio
-from core.video import pdf_to_png, create_all_slide_videos, concat_videos
+from core.video import create_all_slide_videos, concat_videos
+from core.pdf import pdf_to_png
 from core.utils import load_voice_map
 
 

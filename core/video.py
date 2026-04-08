@@ -1,14 +1,5 @@
 import subprocess
 from pathlib import Path
-from pdf2image import convert_from_path
-
-
-def pdf_to_png(dirs, pdf_path):
-    images = convert_from_path(pdf_path, dpi=300)
-
-    for i, img in enumerate(images):
-        img.save(dirs["video"] / f"slide_{i+1:04d}.png")
-
 
 def create_slide_video(dirs, image_path, audio_path, video_path, subtitles_enabled):
     vf = "scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2"

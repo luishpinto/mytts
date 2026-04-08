@@ -1,2 +1,2 @@
 [console_scripts]
-mytts = scripts.main:main
+mytts = main:main

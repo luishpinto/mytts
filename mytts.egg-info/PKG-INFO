@@ -1,8 +1,34 @@
 Metadata-Version: 2.4
 Name: mytts
-Version: 0.1.0
-Summary: TTS + video generation pipeline
+Version: 0.2.0
+Summary: Text-to-speech slide video generator
 Author: Luis Pinto
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
 Requires-Dist: edge-tts
 Requires-Dist: pydub
 Requires-Dist: pdf2image
+
+# mytts
+
+A Python library for generating narrated audio and videos from structured scripts.
+
+## ✨ Features
+
+- 🎙️ Text-to-speech using Microsoft Edge TTS
+- 🧠 Script parser with:
+  - slide structure
+  - inline pauses
+  - voice control
+- 🔊 Audio enhancement (filters + normalization)
+- 🎬 Video generation with ffmpeg
+- 📝 Optional subtitle generation (.srt)
+- 🖼️ PDF → slide images
+
+---
+
+## 📦 Installation
+
+### Local development
+```bash
+pip install -e .
