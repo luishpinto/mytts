@@ -1,17 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+
 [project]
 name = "mytts"
-version = "0.1.2"
-description = "TTS + video generation pipeline"
-authors = [{name = "Luis Pinto"}]
+version = "0.2.0"
+description = "Text-to-speech slide video generator"
+authors = [
+    { name = "Luis Pinto" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
 dependencies = [
     "edge-tts",
     "pydub",
     "pdf2image"
 ]
 
-[project.scripts]
-mytts = "scripts.main:main"
 
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+# CLI entry point (ROOT main.py)
+[project.scripts]
+mytts = "main:main"
+
+
+[tool.setuptools]
+packages = ["core"]
