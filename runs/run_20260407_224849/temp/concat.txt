@@ -1,2 +1,0 @@
-file '/home/beckter/jupyter_project/github/mytts/runs/run_20260407_224849/video/slide_0001.mp4'
-file '/home/beckter/jupyter_project/github/mytts/runs/run_20260407_224849/video/slide_0002.mp4'
